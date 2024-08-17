@@ -310,6 +310,17 @@
                       <div class="w-100"> 
                           <table id="students" class="display" style="width:100%">
                               <thead>
+                                
+                                  <tr>
+                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الإسم" /></th>
+                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الجامعة" /></th>
+                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الكلية" /></th>
+                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="القسم" /></th>
+                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الشعبة" /></th>
+                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="البريد الألكتروني" /></th>
+                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الرقم الجامعي" /></th>
+                                    <th></th>
+                                </tr>
                                   <tr>
                                       <th>الاسم</th>
                                       <th>الجامعة</th>
@@ -385,6 +396,39 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+   <script>
+    $(document).ready(function() {
+        // Initialize DataTable
+        var table = $('#students').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'excel', 'pdf'
+            ],
+            responsive: true,
+            language: {
+                search: "_INPUT_",
+                searchPlaceholder: "بحث",
+                lengthMenu: "_MENU_",
+                paginate: {
+                    first: "الأول",
+                    last: "الأخير",
+                    next: "التالي",
+                    previous: "السابق",
+                },
+            },
+        });
+  
+        // Apply the search for each column
+        $('#students thead tr:eq(0) th').each(function(i) {
+            $('input', this).on('keyup change', function() {
+                if (table.column(i).search() !== this.value) {
+                    table.column(i).search(this.value).draw();
+                }
+            });
+        });
+    });
+  </script>
 
    </body>
    </html>
