@@ -243,6 +243,7 @@
               <button class="nav-link" id="v-pills-books-tab" data-bs-toggle="pill" data-bs-target="#v-pills-books" type="button" role="tab" aria-controls="v-pills-books" aria-selected="true">الكتب</button>
               <button class="nav-link" id="v-pills-duties-tab" data-bs-toggle="pill" data-bs-target="#v-pills-duties" type="button" role="tab" aria-controls="v-pills-duties" aria-selected="false">الواجبات</button>
               <button class="nav-link" id="v-pills-exercises-tab" data-bs-toggle="pill" data-bs-target="#v-pills-exercises" type="button" role="tab" aria-controls="v-pills-exercises" aria-selected="false">التمارين</button>
+              <button class="nav-link" id="v-pills-log-tab" data-bs-toggle="pill" data-bs-target="#v-pills-log" type="button" role="tab" aria-controls="v-pills-log" aria-selected="false">Activity Log</button>
             </div>
             <div class="tab-content w-100" id="v-pills-tabContent">
               <div class="tab-pane fade show active w-100" id="v-pills-details" role="tabpanel" aria-labelledby="v-pills-details-tab" tabindex="0">
@@ -815,6 +816,43 @@
                       </tr>
                   </tbody>
               </table>
+              </div>
+              <div class="tab-pane fade w-100 table_layout" id="v-pills-log" role="tabpanel" aria-labelledby="v-pills-log-tab" tabindex="0">
+                <form action="" class="w-100 mb-5">
+                  <div class="flex justify-between items-center flex-row flex-wrap w-100">
+                    <div class="filter_items flex justify-start gap-4 items-center">
+                      <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                        <label for="" class="text-third-color font-semibold text-[14px] mb-2"> التاريخ </label>
+                        <input type="date" class="form-control h-[42px] !w-[200px]">
+                      </div>
+                    </div>
+                    <div class="filter_button">
+                      <button class="bg-second-color text-primary-color py-[8px] px-[15px] rounded-[8px] w-[100px]"> فلتر </button>
+                    </div>
+                  </div>
+                </form>
+                <div class="timeline">
+                  <div class="wrapper">
+                    <ul class="sessions">
+                      <li>
+                        <div class="time"> 27 - 11 - 2020 </div>
+                        <p> قام المستخدم ب تسجيل الدخول </p>
+                      </li>
+                      <li>
+                        <div class="time"> 24 - 7 - 2024 </div>
+                        <p> قام المستخدم بالدخول إلى الاختبار </p>
+                      </li>
+                      <li>
+                        <div class="time"> 27 - 11 - 2020 </div>
+                        <p> قام المستخدم ب تسجيل الدخول </p>
+                      </li>
+                      <li>
+                        <div class="time"> 24 - 7 - 2024 </div>
+                        <p> قام المستخدم بالدخول إلى الاختبار </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div> 
               </div>
             </div>
           </div>

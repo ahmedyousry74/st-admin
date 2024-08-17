@@ -671,7 +671,8 @@ table td a {
   width: 250px;
   max-width: 250px;
 }
-.add_exam_duty .continue__btn, .add_exam_duty .submit {
+.add_exam_duty .continue__btn,
+.add_exam_duty .submit {
   background-color: #EFEEFE;
   color: #fff;
   border-radius: 25px;
@@ -701,12 +702,14 @@ table td a {
   border-color: #553DDD;
   color: #fff;
 }
-.add_exam_duty #exam__tab ul .nav-link.active svg, .add_exam_duty #exam__tab ul .nav-link.active path {
+.add_exam_duty #exam__tab ul .nav-link.active svg,
+.add_exam_duty #exam__tab ul .nav-link.active path {
   color: #fff !important;
   stroke: #fff !important;
   fill: #fff !important;
 }
-.add_exam_duty .input_form input, .add_exam_duty .input_form select {
+.add_exam_duty .input_form input,
+.add_exam_duty .input_form select {
   height: 48px;
 }
 .add_exam_duty .form-control {
@@ -719,12 +722,14 @@ table td a {
   font-weight: 600;
 }
 
-.adding__questions .delete_question, .list__questions .delete_question {
+.adding__questions .delete_question,
+.list__questions .delete_question {
   color: red;
   margin: 15px 0;
   font-weight: 600;
 }
-.adding__questions .form-control, .list__questions .form-control {
+.adding__questions .form-control,
+.list__questions .form-control {
   height: 48px;
   direction: rtl;
 }
@@ -993,6 +998,72 @@ hr {
 
 .sub-menu.active {
   display: block !important;
+}
+
+.timeline ul,
+.timeline li {
+  list-style: none;
+  padding: 0;
+}
+.timeline .wrapper {
+  border-radius: 15px;
+}
+.timeline h1 {
+  font-size: 1.1rem;
+}
+.timeline .sessions {
+  margin-top: 2rem;
+  border-radius: 12px;
+  position: relative;
+}
+.timeline li {
+  padding-bottom: 1.5rem;
+  border-right: 1px solid #abaaed;
+  position: relative;
+  padding-right: 20px;
+  margin-right: 10px;
+}
+.timeline li:last-child {
+  border: 0px;
+  padding-bottom: 0;
+}
+.timeline li:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 1px solid #4e5ed3;
+  box-shadow: 3px 3px 0px #bab5f8;
+  box-shadow: 3px 3px 0px #bab5f8;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: 0px;
+}
+.timeline .time {
+  color: #2a2839;
+  font-weight: 500;
+}
+@media screen and (min-width: 601px) {
+  .timeline .time {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .timeline .time {
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+  }
+}
+.timeline p {
+  color: #4f4f4f;
+  line-height: 1.5;
+  margin-top: 0.4rem;
+}
+@media screen and (max-width: 600px) {
+  .timeline p {
+    font-size: 0.9rem;
+  }
 }
 
 .sidebar {
