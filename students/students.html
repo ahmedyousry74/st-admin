@@ -235,7 +235,13 @@
     <div class="home-content">
         <div class="flex justify-between items-center flex-row w-100">
             <h2 class="text-third-color font-semibold text-[20px] my-5 block"> الطلاب </h2>
-            <a href="./add-student.html"  class="bg-second-color text-primary-color font-semibold text-[14px] rounded-[6px] py-[8px] px-[25px]"> إضافة طالب </a>
+            <div class="flex justify-start items-center flex-row gap-2">
+              <a href="./add-student.html"  class="bg-second-color text-primary-color font-semibold text-[14px] rounded-[6px] py-[8px] px-[25px]"> إضافة طالب </a>
+              <div class="relative">
+                <input type="file" class="absolute top-0 left-0 h-100 opacity-0 w-100">
+                <button class="bg-primary-color text-second-color font-semibold text-[14px] rounded-[6px] py-[8px] px-[25px]"> Upload </button>
+              </div>
+            </div>
         </div>
         <form action="" class="w-100 mb-5">
             <div class="flex justify-between items-center flex-row flex-wrap w-100">
