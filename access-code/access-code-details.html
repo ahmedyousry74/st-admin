@@ -712,6 +712,50 @@
                   </div>
                 </div>
             </div>
+            <div class="all__codes mt-5">
+              <h2 class="text-third-color font-semibold text-[20px] my-5 block"> كل الأكواد </h2>
+              <div class="table_layout w-100">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="w-100"> 
+                            <table id="allCodes" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>الكود</th>
+                                        <th>تاريخ الأنتهاء</th>
+                                        <th>عدد الطلاب</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> 
+                                            <a href="./access-code-details.html" class="!text-third-color font-semibold text-[18px]" style="color:#161439 ;">
+                                                كود 1
+                                            </a>
+                                        </td>
+                                        <td>
+                                          15 - 4 - 2025
+                                        </td>
+                                        <td>45 طالب</td>
+                                    </tr>
+                                    <tr>
+                                        <td> 
+                                            <a href="./access-code-details.html" class="!text-third-color font-semibold text-[18px]" style="color:#161439 ;">
+                                                كود 1
+                                            </a>
+                                        </td>
+                                        <td>
+                                          15 - 4 - 2025
+                                        </td>
+                                        <td>45 طالب</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
       </div>
       <footer
@@ -744,5 +788,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('#allCodes').DataTable({
+              dom: 'Bfrtip',
+              buttons: [
+                  'excel', 'pdf'
+              ],
+              responsive: true,
+              language: {
+                  search: "_INPUT_",
+                  searchPlaceholder: "بحث",
+                  lengthMenu: "_MENU_",
+                  paginate: {
+                  first: "الأول",
+                  last: "الأخير",
+                  next: "التالي",
+                  previous: "السابق",
+                  },
+              },
+          });
+      });
+    </script>
   </body>
 </html>
