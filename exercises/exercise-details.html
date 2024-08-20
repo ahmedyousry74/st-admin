@@ -280,7 +280,98 @@
       <div class="show__exam flex justify-center items-center flex-row">
         <a href="./exercise.html" class="bg-second-color text-primary-color font-semibold text-[14px] rounded-[6px] py-[8px] px-[25px]"> مشاهدة التمرين </a>
     </div>
-
+    <div class="tabs__form w-100 mt-5">
+      <ul class="nav nav-pills flex justify-start items-center flex-row gap-4" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="pills-attends-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-attends"
+            type="button"
+            role="tab"
+            aria-controls="pills-attends"
+            aria-selected="true"
+          >
+            الطلاب الذين حضروا
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-notAttends-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-notAttends"
+            type="button"
+            role="tab"
+            aria-controls="pills-notAttends"
+            aria-selected="true"
+          >
+            الطلاب الذين لم يحضروا
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content form__details" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-attends"
+          role="tabpanel"
+          aria-labelledby="pills-attends-tab"
+          tabindex="0"
+        >
+        <div class="table_layout">
+          <table id="attendsTable" class="display" style="width: 100%">
+            <thead>
+              <tr>
+                <th>اسم الطالب</th>
+                <th>تاريخ التمرين</th>
+                <th>المدة</th>
+                <th>الدرجة</th>
+                <th>الدرجة النهائية</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>احمد يسري</td>
+                <td>20-11-2020</td>
+                <td>20 دقيقة</td>
+                <td>30</td>
+                <td>30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-notAttends"
+          role="tabpanel"
+          aria-labelledby="pills-notAttends-tab"
+          tabindex="0"
+        >
+        <div class="table_layout">
+          <table id="notAttendsTable" class="display" style="width: 100%">
+            <thead>
+              <tr>
+                <th>اسم الطالب</th>
+                <th>تاريخ التمرين</th>
+                <th>اسم ولي الأمر</th>
+                <th>رسالة إلى ولي الأمر</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>احمد يسري</td>
+                <td>20-11-2020</td>
+                <td>يسري</td>
+                <td> <a href="whatsapp://send?phone=+966551845936"> <img src="../assets/images/whatsapp.svg" alt="whatsapp" height="24" width="24"> </a> </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+    </div>
     </div>
 <footer class="!bg-[#f4f4f4] p-4 w-100 flex justify-center items-center flex-row">
       <span class="text-third-color font-semibold text-[14px] text-center"> © جميع الحقوق محفوظة - لــ شركة الفكر العلمي 2024 </span>
