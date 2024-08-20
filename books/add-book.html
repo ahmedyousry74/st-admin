@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../src/output.css" />
   <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css" />
   <link rel="stylesheet" href="../assets/css/datatable.css" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
   <title>St Teacher</title>
   <link rel="icon" href="../assets/images/logo-1.png" type="image/x-icon" />
 </head>
@@ -239,9 +241,12 @@
           <form action="" class="w-100">
             <div class="row">
               <div class="col-md-6">
-                <div class="d-flex justify-content-start align-items-start flex-column gap-1 mb-4">
-                  <label for="" class="text-third-color font-semibold text-[14px] mb-2"> اسم الكتاب </label>
-                  <input type="text" class="form-control h-[48px]" placeholder="اسم الكتاب">
+                <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                  <label for="" class="text-third-color font-semibold text-[14px] mb-2"> الكتاب </label>
+                  <select id="bookMultiple" multiple="multiple" class="form-control">
+                    <option value="1">كتاب 1 </option>
+                    <option value="2">كتاب 2</option>
+                  </select>
                 </div>
               </div>
               <div class="col-md-6">
@@ -402,6 +407,8 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
  <script>
   $(document).ready(function() {
       $('#Books').DataTable({
@@ -422,6 +429,14 @@
               },
           },
       });
+  });
+</script>
+<script>
+  $(document).ready(function() {
+      $('#bookMultiple').select2({
+            placeholder: "الكتاب",
+            allowClear: true
+      })
   });
 </script>
  </body>

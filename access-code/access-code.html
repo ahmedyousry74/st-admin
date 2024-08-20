@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../src/output.css" />
   <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css" />
   <link rel="stylesheet" href="../assets/css/datatable.css" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <title>St Teacher</title>
   <link rel="icon" href="../assets/images/logo-1.png" type="image/x-icon" />
 </head>
@@ -242,19 +243,11 @@
           <div class="filter_items flex justify-start gap-4 items-center">
             <div class="d-flex justify-content-start align-items-start flex-column gap-1">
               <label for="" class="text-third-color font-semibold text-[14px] mb-2"> الكود </label>
-              <select
-                name="class"
-                id="class"
-                class="form-select form-control !w-[200px]"
-                aria-label="Default select example"
-                aria-placeholder="Segmentation*"
-              >
-                <option selected disabled>الكود </option>
-                <option value="">الكود 1</option>
-                <option value="">الكود 2</option>
-                <option value="">الكود 3</option>
-                <option value="">الكود 4</option>
-              </select>
+              <input type="text" class="!w-[200px] form-control" placeholder="الكود">
+            </div>
+            <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+              <label for="" class="text-third-color font-semibold text-[14px] mb-2"> Prefixes </label>
+              <input type="text" class="!w-[200px] form-control" placeholder="Prefixes">
             </div>
             <div class="d-flex justify-content-start align-items-start flex-column gap-1">
               <label for="" class="text-third-color font-semibold text-[14px] mb-2"> الكتاب</label>
@@ -371,6 +364,8 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
  <script>
   $(document).ready(function() {
       $('#accessCode').DataTable({
@@ -393,5 +388,6 @@
       });
   });
 </script>
+
  </body>
  </html>

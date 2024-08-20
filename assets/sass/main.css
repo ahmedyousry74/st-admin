@@ -1066,6 +1066,31 @@ hr {
   }
 }
 
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  height: 48px !important;
+  border: 1px solid #dee2e6 !important;
+}
+
+.select2-container--default .select2-selection--multiple {
+  height: 48px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: #553DDD !important;
+  border-color: #553DDD !important;
+  color: #fff !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: #fff !important;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+  direction: rtl !important;
+  padding-inline-start: 11px !important;
+  font-family: "Cairo" !important;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
