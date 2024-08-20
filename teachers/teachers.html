@@ -316,15 +316,6 @@
                       <div class="w-100"> 
                           <table id="teachers" class="display" style="width:100%">
                               <thead>
-                                <tr>
-                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الإسم" /></th>
-                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="عدد الكتب" /></th>
-                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الجامعة" /></th>
-                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الكلية" /></th>
-                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="القسم" /></th>
-                                    <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الشعبة" /></th>
-                                    <th><input type="date" class="form-control w-100 h-[32px]" placeholder="تاريخ الأنضمام" /></th>
-                                </tr>
                                   <tr>
                                         <th>الاسم</th>
                                         <th>عدد الكتب </th>
@@ -333,6 +324,15 @@
                                         <th>القسم</th>
                                         <th>الشعبة</th> 
                                         <th>تاريخ الأنضمام</th>
+                                  </tr>
+                                  <tr>
+                                      <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الإسم" /></th>
+                                      <th><input type="text" class="form-control w-100 h-[32px]" placeholder="عدد الكتب" /></th>
+                                      <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الجامعة" /></th>
+                                      <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الكلية" /></th>
+                                      <th><input type="text" class="form-control w-100 h-[32px]" placeholder="القسم" /></th>
+                                      <th><input type="text" class="form-control w-100 h-[32px]" placeholder="الشعبة" /></th>
+                                      <th><input type="date" class="form-control w-100 h-[32px]" placeholder="تاريخ الأنضمام" /></th>
                                   </tr>
                               </thead>
                               <tbody>
@@ -456,7 +456,7 @@
                 },
             },
         });
-        $('#teachers thead tr:eq(0) th').each(function(i) {
+        $('#teachers thead tr:eq(1) th').each(function(i) {
             $('input', this).on('keyup change', function() {
                 if (table.column(i).search() !== this.value) {
                     table.column(i).search(this.value).draw();
