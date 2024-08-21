@@ -671,12 +671,52 @@
           <h2 class="text-third-color font-semibold text-[20px] my-5 block">
             التصنيفات
           </h2>
-          <a
-            href="./add-book.html"
+          <button
+            data-bs-toggle="modal" data-bs-target="#addRelease"
             class="bg-second-color text-primary-color font-semibold text-[14px] rounded-[6px] py-[8px] px-[25px]"
           >
-            إضافة تصنيف
-          </a>
+            إضافة دار نشر
+          </button>
+        </div>
+        <div class="table_layout w-100">
+          <div class="row">
+              <div class="col-12">
+                  <div class="w-100"> 
+                      <table id="Books" class="display" style="width:100%">
+                          <thead>
+                              <tr>
+                                  <th>دار النشر</th>
+                                  <th>اجراء</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td> 
+                                      دار نشر 1
+                                  </td>
+                                  <td>
+                                    <div class="flex justify-start items-start flex-row gap-3">
+                                      <button > <img src="../assets/images/trash-03.svg" alt=""> </button>
+                                      <button data-bs-toggle="modal" data-bs-target="#editRelease"> <img src="../assets/images/edit.svg"  alt=""> </button>
+                                    </div> 
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td> 
+                                      دار نشر 2
+                                  </td>
+                                  <td>
+                                    <div class="flex justify-start items-start flex-row gap-3">
+                                      <button> <img src="../assets/images/trash-03.svg" alt=""> </button>
+                                      <button data-bs-toggle="modal" data-bs-target="#editRelease"> <img src="../assets/images/edit.svg"  alt=""> </button>
+                                    </div> 
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
         </div>
       </div>
       <footer
@@ -687,6 +727,55 @@
         </span>
       </footer>
     </section>
+
+    <!-- modal add addRelease -->
+<div class="modal fade" id="addRelease" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form action="">
+        <div class="modal-body">
+          <h2 class="text-primary-color text-[18px] font-semibold mb-4"> إضافة دار نشر </h2>
+          <div class="flex justify-start items-start flex-col gap-2 mb-4">
+            <label for="" class="text-third-color font-semibold text-[15px] block"> الدار نشر </label>
+            <select id="teacherMultiple" class="form-control">
+              <option disabled selected> الدار نشر </option>
+              <option value="1">دار نشر 1 </option>
+              <option value="2">دار نشر 2</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex justify-center items-center flex-row gap-3 pb-4">
+          <button class="bg-primary-color text-[16px] text-white font-medium rounded-[6px] py-[8px] px-[14px] h-[48px] flex justify-center items-center w-[100px]"> تأكيد </button>
+          <button type="button" data-bs-dismiss="modal" class="text-primary-color bg-transparent text-[16px] font-medium rounded-[6px] py-[8px] px-[14px] h-[48px] flex justify-center items-center w-[100px]"> إلغاء </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- modal edit editRelease -->
+<div class="modal fade" id="editRelease" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form action="">
+        <div class="modal-body">
+          <h2 class="text-primary-color text-[18px] font-semibold mb-4"> تعديل دار النشر </h2>
+          <div class="flex justify-start items-start flex-col gap-2 mb-4">
+            <label for="" class="text-third-color font-semibold text-[15px] block"> دار النشر </label>
+            <select id="teacherMultiple" class="form-control">
+              <option disabled selected> دار النشر </option>
+              <option value="1">دار نشر 1 </option>
+              <option value="2">دار نشر 2</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex justify-center items-center flex-row gap-3 pb-4">
+          <button class="bg-primary-color text-[16px] text-white font-medium rounded-[6px] py-[8px] px-[14px] h-[48px] flex justify-center items-center w-[100px]"> تأكيد </button>
+          <button type="button" data-bs-dismiss="modal" class="text-primary-color bg-transparent text-[16px] font-medium rounded-[6px] py-[8px] px-[14px] h-[48px] flex justify-center items-center w-[100px]"> إلغاء </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
