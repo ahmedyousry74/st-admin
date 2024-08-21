@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../src/output.css" />
     <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="../assets/css/datatable.css" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <title>St Teacher</title>
     <link rel="icon" href="../assets/images/logo-1.png" type="image/x-icon" />
   </head>
@@ -669,14 +671,71 @@
       <div class="home-content">
         <div class="flex justify-between items-center flex-row w-100">
           <h2 class="text-third-color font-semibold text-[20px] my-5 block">
-            التصنيفات
+            الشعب
           </h2>
-          <a
-            href="./add-book.html"
+          <button
+          data-bs-toggle="modal" data-bs-target="#addDivision"
             class="bg-second-color text-primary-color font-semibold text-[14px] rounded-[6px] py-[8px] px-[25px]"
           >
-            إضافة تصنيف
-          </a>
+            إضافة شعبة
+          </button>
+        </div>
+        <div class="table_layout w-100">
+          <div class="row">
+              <div class="col-12">
+                  <div class="w-100"> 
+                      <table id="Books" class="display" style="width:100%">
+                          <thead>
+                              <tr>
+                                  <th>الشعبة</th>
+                                  <th>القسم</th>
+                                  <th>الكلية</th>
+                                  <th>الجامعة</th>
+                                  <th>اجراء</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td> 
+                                      شعبة 1
+                                  </td>
+                                  <td> 
+                                      قسم 1
+                                  </td>
+                                  <td> 
+                                      كلية 1
+                                  </td>
+                                  <td> 1 جامعة </td>
+                                  <td>
+                                    <div class="flex justify-start items-start flex-row gap-3">
+                                      <button > <img src="../assets/images/trash-03.svg" alt=""> </button>
+                                      <button data-bs-toggle="modal" data-bs-target="#editDivision"> <img src="../assets/images/edit.svg"  alt=""> </button>
+                                    </div> 
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td> 
+                                      شعبة  2
+                                  </td>
+                                  <td> 
+                                      قسم  2
+                                  </td>
+                                  <td> 
+                                      كلية  2
+                                  </td>
+                                  <td> 2 جامعة </td>
+                                  <td>
+                                    <div class="flex justify-start items-start flex-row gap-3">
+                                      <button> <img src="../assets/images/trash-03.svg" alt=""> </button>
+                                      <button data-bs-toggle="modal" data-bs-target="#editDivision"> <img src="../assets/images/edit.svg"  alt=""> </button>
+                                    </div> 
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
         </div>
       </div>
       <footer
@@ -687,6 +746,90 @@
         </span>
       </footer>
     </section>
+
+
+<!-- modal add addDepartment -->
+<div class="modal fade" id="addDivision" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form action="">
+        <div class="modal-body">
+          <h2 class="text-primary-color text-[18px] font-semibold mb-4"> إضافة شعبة </h2>
+          <div class="flex justify-start items-start flex-col gap-2 mb-4 w-100">
+            <label for="" class="text-third-color font-semibold text-[15px] block"> الجامعة </label>
+            <select id="addUniversity" multiple="multiple" class="form-control">
+              <option value="1">الجامعة 1 </option>
+              <option value="2">الجامعة 2</option>
+            </select>
+          </div>
+          <div class="flex justify-start items-start flex-col gap-2 mb-4 w-100">
+            <label for="" class="text-third-color font-semibold text-[15px] block"> الكلية </label>
+            <select id="AddFaculty" multiple="multiple" class="form-control">
+              <option value="1">الكلية 1 </option>
+              <option value="2">الكلية 2</option>
+            </select>
+          </div>
+          <div class="flex justify-start items-start flex-col gap-2 mb-4 w-100">
+            <label for="" class="text-third-color font-semibold text-[15px] block"> القسم </label>
+            <select id="AddDepartment" multiple="multiple" class="form-control">
+              <option value="1">القسم 1 </option>
+              <option value="2">القسم 2</option>
+            </select>
+          </div>
+          <div class="flex justify-start items-start flex-col gap-2 mb-4">
+            <label for="" class="text-third-color font-semibold text-[15px] block"> الشعبة </label>
+            <input type="text" class="form-control" placeholder="الشعبة">
+          </div>
+        </div>
+        <div class="flex justify-center items-center flex-row gap-3 pb-4">
+          <button class="bg-primary-color text-[16px] text-white font-medium rounded-[6px] py-[8px] px-[14px] h-[48px] flex justify-center items-center w-[100px]"> تأكيد </button>
+          <button type="button" data-bs-dismiss="modal" class="text-primary-color bg-transparent text-[16px] font-medium rounded-[6px] py-[8px] px-[14px] h-[48px] flex justify-center items-center w-[100px]"> إلغاء </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- modal edit editDepartment -->
+<div class="modal fade" id="editDivision" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form action="">
+        <div class="modal-body">
+          <h2 class="text-primary-color text-[18px] font-semibold mb-4"> تعديل شعبة </h2>
+          <div class="flex justify-start items-start flex-col gap-2 mb-4 w-100">
+            <label for="" class="text-third-color font-semibold text-[15px] block"> الجامعة </label>
+            <select id="EditUniversity" multiple="multiple" class="form-control">
+              <option value="1">الجامعة 1 </option>
+              <option value="2">الجامعة 2</option>
+            </select>
+          </div>
+          <div class="flex justify-start items-start flex-col gap-2 mb-4 w-100">
+            <label for="" class="text-third-color font-semibold text-[15px] block"> الكلية </label>
+            <select id="editFaculty" multiple="multiple" class="form-control">
+              <option value="1">الكلية 1 </option>
+              <option value="2">الكلية 2</option>
+            </select>
+          </div>
+          <div class="flex justify-start items-start flex-col gap-2 mb-4 w-100">
+            <label for="" class="text-third-color font-semibold text-[15px] block"> القسم </label>
+            <select id="editDepartment" multiple="multiple" class="form-control">
+              <option value="1">القسم 1 </option>
+              <option value="2">القسم 2</option>
+            </select>
+          </div>
+          <div class="flex justify-start items-start flex-col gap-2 mb-4">
+            <label for="" class="text-third-color font-semibold text-[15px] block"> الشعبة </label>
+            <input type="text" class="form-control" placeholder="الشعبة">
+          </div>
+        </div>
+        <div class="flex justify-center items-center flex-row gap-3 pb-4">
+          <button class="bg-primary-color text-[16px] text-white font-medium rounded-[6px] py-[8px] px-[14px] h-[48px] flex justify-center items-center w-[100px]"> تأكيد </button>
+          <button type="button" data-bs-dismiss="modal" class="text-primary-color bg-transparent text-[16px] font-medium rounded-[6px] py-[8px] px-[14px] h-[48px] flex justify-center items-center w-[100px]"> إلغاء </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
@@ -709,6 +852,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
     <script>
       $(document).ready(function () {
         $("#Books").DataTable({
@@ -726,6 +872,86 @@
               previous: "السابق",
             },
           },
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+          $('#addUniversity').select2({
+                placeholder: "الجامعة",
+                allowClear: true
+          })
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+          $('#AddFaculty').select2({
+                placeholder: "الكلية",
+                allowClear: true
+          })
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+          $('#AddDepartment').select2({
+                placeholder: "القسم",
+                allowClear: true
+          })
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        // Initialize Select2 when the modal is shown
+        $('#addDivision').on('shown.bs.modal', function () {
+            $('#addUniversity').select2({
+                dropdownParent: $('#addDivision'),
+            });
+            $('#AddFaculty').select2({
+                dropdownParent: $('#addDivision'),
+            });
+            $('#AddDepartment').select2({
+                dropdownParent: $('#addDivision'),
+            });
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+          $('#EditUniversity').select2({
+                placeholder: "الجامعة",
+                allowClear: true
+          })
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+          $('#editFaculty').select2({
+                placeholder: "الكلية",
+                allowClear: true
+          })
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+          $('#editDepartment').select2({
+                placeholder: "القسم",
+                allowClear: true
+          })
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        // Initialize Select2 when the modal is shown
+        $('#editDivision').on('shown.bs.modal', function () {
+            $('#EditUniversity').select2({
+                dropdownParent: $('#editDivision')
+            });
+            $('#editFaculty').select2({
+                dropdownParent: $('#editDivision')
+            });
+            $('#editDepartment').select2({
+                dropdownParent: $('#editDivision')
+            });
         });
       });
     </script>
